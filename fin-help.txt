@@ -1,0 +1,95 @@
+FIN - PowerShell Enhancement Suite
+
+## DESCRIPTION
+
+`fin` is a collection of functions, aliases, and tools that provide a more
+powerful and user-friendly PowerShell experience, inspired by features from the
+Fish shell. It includes enhanced navigation, better history management, and a
+host of useful utility commands.
+
+This help file is displayed when you run `man fin`. For information on other
+aliased commands (like `ls`, `grep`, `cat`), use `man` on the specific command
+(e.g., `man ls`), which will call the standard PowerShell `Get-Help`.
+
+## DIRECTORY HISTORY
+
+Fin maintains a persistent history of directories you visit, allowing you to
+navigate back and forth easily.
+
+COMMANDS:
+  - fin
+    Displays the entire directory history with indices. The current directory
+    is marked with "->".
+
+  - fin [index]
+    Navigates to the directory at the specified index in the history.
+
+  - n (next)
+    Navigates forward to the next directory in the history.
+
+  - p (previous)
+    Navigates backward to the previous directory in the history.
+
+  - cd -
+    Switches to the previously visited directory (a quick toggle).
+
+  - .., ..., ....
+    Quickly navigate up 1, 2, or 3 parent directories.
+
+## COMMAND HISTORY
+
+The standard `history` command is enhanced to provide access to both the
+current session's history and the full, persisted history log from PSReadLine.
+
+COMMANDS:
+  - history
+    Shows the command history for the current PowerShell session. Accepts the
+    same parameters as `Get-History`.
+
+  - history -f
+    Shows the full, unfiltered command history from the PSReadLine log file.
+    This includes commands from previous sessions.
+
+  - full-history
+    A convenient alias for `history -f`.
+
+## CORE UTILITIES
+
+  - reload
+    Reloads your PowerShell profile, applying any changes made to it or to the
+    fin.ps1 script itself.
+
+  - sysinfo
+    Displays a summary of system information, including CPU, memory, USB, and
+    PCI devices.
+
+  - weather [location] [-Forecast]
+    Shows the weather for a specified location, or your auto-detected location.
+    Use the -Forecast switch to see a multi-day forecast.
+
+  - math "[expression]"
+    A simple command-line calculator. The expression must be in a string.
+    Example: math "5 * (2 + 3)"
+
+  - funced [function_name]
+    Opens a function's definition in a temporary file in Notepad for editing
+    in the current session.
+
+  - funcsave [function_name]
+    Saves a function from the current session to your $PROFILE, making it
+    permanent.
+
+## SHIMMED COMMANDS
+
+Fin provides PowerShell-native versions of many common Unix/Linux commands.
+These "shims" will intelligently use the PowerShell version if the native
+command is not available.
+
+Some of the available commands include:
+`awk`, `cat`, `cp`, `curl`, `date`, `df`, `dig`, `du`, `grep`, `head`, `ip`,
+`ls`, `man`, `mkdir`, `mv`, `netstat`, `ping`, `ps`, `rm`, `rmdir`, `sed`,
+`tail`, `tar`, `touch`, `tr`, `wc`, `wget`, `which`
+
+## SEE ALSO
+
+`fin.ps1`, `readme.txt`, `Get-Help`, `Get-History`, `Get-PSReadLineOption`

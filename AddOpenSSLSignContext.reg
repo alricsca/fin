@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\SignWithOpenSSL]
+@="Sign with OpenSSL"
+"Icon"="C:\\Program Files\\OpenSSL-Win64\\bin\\openssl.exe"
+
+[HKEY_CLASSES_ROOT\*\shell\SignWithOpenSSL\command]
+@="\"C:\\Users\\alric\\AppData\\Roaming\\Microsoft\\SystemCertificates\\My\\Certificates\\SignWithOpenSSL.bat\" \"%1\""
+
