@@ -4,7 +4,7 @@
 
 ## What is Fin?
 
-Fin is a single-file PowerShell script (`fin.ps1`) that enhances your PowerShell
+Fin is a PowerShell script (`fin.ps1`) that enhances your PowerShell
 experience by adding features and commands inspired by the Fish shell. It aims
 to provide a more ergonomic and powerful command-line environment without
 requiring non-native tools like WSL or Cygwin.
